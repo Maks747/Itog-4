@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Сидит дед, во сто шуб одет, кто его раздевает, тот слезы проливает");
+            String temp = sc.nextLine();
+            String otvet1 = "Заархивированный вирус";
+            String otvet2 = "Подсказка";
+
+            if (temp.equals(otvet1)) {
+                System.out.println("Правильно");
+            } else {
+                if (temp.equals(otvet2)) {
+                    System.out.println("Это относится к ОРВИ, но не совсем)");
+                }
+                System.out.println("Подумай еще");
+
+                if (sc.nextLine().equals(otvet1)) {
+                    System.out.println("Правильно");
+                } else {
+                    if (temp.equals(otvet2)) {
+                        System.out.println("Подсказка уже недоступна");
+                    }
+                    System.out.println("Подумай еще");
+
+                    if (sc.nextLine().equals(otvet1)) {
+                        System.out.println("Правильно");
+                    } else {
+                        if (temp.equals(otvet2)) {
+                            System.out.println("Подсказка уже недоступна");
+                        }
+                        System.out.println("Обидно, приходи в другой раз");
+                    }
+                }
+            }
+        }
+    }
